@@ -4,7 +4,7 @@ session_start();
 //  ferme la session 
 session_destroy();
 //rederige vers l'acceuil
-header('location: index.php');
+header('location: home.php');
 
 
 ?>

@@ -23,20 +23,20 @@
 <ul class="nav justify-content-center">
     </li>
     <li class="nav-item">
-        <a class="nav-link" href="index.php">Acceuil</a>
+        <a class="nav-link" href="home">Acceuil</a>
     </li>
     <li class="nav-item">
-        <a class="nav-link" href="contact.php">Contact</a>
+        <a class="nav-link" href="contact">Contact</a>
     </li>
     <li class="nav-item">
-        <a class="nav-link" href="recherche.php">recherche</a>
+        <a class="nav-link" href="recherche">recherche</a>
     </li>
     <li class="nav-item">
-        <a class="nav-link" href="livraison.php">Livraison</a>
+        <a class="nav-link" href="livraison">Livraison</a>
     </li>
     
     <?php 
-    //si  la cle "user"  existe en session alors on affiche le vouton de deconnection
+    //si  la cle "user"  existe en session alors on affiche le bouton de deconnection
      if(isset($_SESSION['user'])){ ?>
     <li class="nav-item">
     <a class="nav-link" href="logout.php"> se deconnecter</a>

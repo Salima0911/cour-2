@@ -3,7 +3,7 @@ session_start();
 
 //var_dump
 
-$title = 'CONNECTION';
+
 require_once(__DIR__ ."/varriable.php");
 
 //on commence par verefier si email et  password existe dans la superglobale
@@ -37,8 +37,8 @@ if(isset($_POST['email']) &&isset($_POST['password'])){
         //j'arrete  le code  si on a trouver l'utilisateur car ca sert a rien a continuer la boucle
         //return
         $_SESSION['user'] =$user['email'];
-        header('location: index.php');
-               
+        header('location: home');
+        return;
             }
         
         }
@@ -47,24 +47,8 @@ if(isset($_POST['email']) &&isset($_POST['password'])){
     }
 }
 
+require_once(__DIR__."/views/login.view.php");
 
-?>
-    <?php require_once(__DIR__ . "/head.php") ?>
-    <form action="" method= "POST">
-        <label for="email">Email</label>
-        <input type="email" name='email'/>
-
-        <label for="password"> password</label>
-        <input type="password" name="password" />
-    
-        <button type="submit" class="btn btn-primary">Sign in</button>
-    </form>
-    <?php 
-    if(isset ($errorMessage)){
-        echo "<p class='text-danger'>" . $errorMessage . "<p>";
-    } 
-     require_once(__DIR__."/footer.php") ?>
-    
 
        
         
